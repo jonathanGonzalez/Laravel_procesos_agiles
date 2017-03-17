@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -24,9 +24,6 @@
 </head>
 
 <body>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--  <script src="js/scripts.js"></script>-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,10 +39,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">            
-            <li class="@yield('indexActive')" ><a href="{!! url('index/index'); !!}">Registro Principal<span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>            
-            <li class="@yield('vehiculosActive')"><a href="{!! url('vehiculos/vehiculos'); !!}">Vehículos <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+            <li class="@yield('indexActive')" ><a href="{!! url('index/index'); !!}">Registro Principal <span class="glyphicon glyphicon glyphicon-random" aria-hidden="true"> </span></a></li>            
+            <li class="@yield('vehiculosActive')"><a href="{!! url('vehiculos/vehiculos'); !!}">Vehículos <span class="glyphicon glyphicon glyphicon-road" aria-hidden="true"></span></a></li>
             <li class="@yield('personasActive')"><a href="{!! url('personas/personas'); !!}">Clientes <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
-            <li class="@yield('informesActive')"><a href="{!! url('informes/informes'); !!}">informes <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>
+            <li class="@yield('informesActive')"><a href="{!! url('informes/informes'); !!}">informes <span class="glyphicon glyphicon glyphicon-zoom-in" aria-hidden="true"></span></a></li>
             <li class="@yield('usuariosActive')"><a href="{!! url('usuarios/usuarios'); !!}">Usuarios y permisos <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>          
           </ul>
           <form class="navbar-form navbar-left">
@@ -62,8 +59,17 @@
     </nav>
     <div class="container">
       <div class="row">
-        <p>@yield('contenido')</p>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          @yield('contenido')
+        </div>
       </div>
-    </div>    
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"
+        integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+        crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--  <script src="js/scripts.js"></script>-->
+    
 </body>
 </html>
