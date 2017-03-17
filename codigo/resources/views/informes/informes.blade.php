@@ -1,4 +1,10 @@
 @extends('layouts.app')
+
+@section('informesActive')
+
+active
+
+@stop
 @section('contenido')
 
 <table class="table" border="1">
@@ -16,7 +22,7 @@
   <td>28/03/2017</td>
   <td>11:45</td>
   <td>SIN REGISTRAR</td> 
-  <th><span class="btn btn-primary">registrar salida</span></th>
+  <th><span class="btn btn-primary">generar informe</span></th>
 </tr>
 <tr>
   <td>ffr548</td>
@@ -24,7 +30,7 @@
   <td>28/03/2017</td>
   <td>11:00</td>
   <td>11:25</td> 
-  <th><span class="btn btn-primary">registrar salida</span></th>
+  <th><span class="btn btn-primary">generar informe</span></th>
 </tr>
 </table>
 

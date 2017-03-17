@@ -1,4 +1,11 @@
 @extends('layouts.app')
+
+@section('usuariosActive')
+
+active
+
+@stop
+
 @section('contenido')
 
 <form class="form">
@@ -28,6 +35,11 @@
   </div>    
   <button type="submit" class="btn btn-default">Registrar Usuario</button>
 </form>
+
+<div class="row">
+  <div style="height:50px;" class="col-md-12">
+  </div>
+<div>
 
 <table class="table" border="1">
 <tr>
