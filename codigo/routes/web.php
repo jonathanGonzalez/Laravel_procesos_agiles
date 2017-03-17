@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('index/index', 'IndexController@index');
 Route::get('personas/personas', 'PersonasController@personas');
 Route::get('vehiculos/vehiculos', 'VehiculosController@vehiculos');
+Route::get('informes/informes', 'InformesController@informes');
+Route::get('usuarios/usuarios', 'UsuariosController@usuarios');

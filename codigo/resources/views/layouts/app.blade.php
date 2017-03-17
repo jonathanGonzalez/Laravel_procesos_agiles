@@ -39,18 +39,13 @@
           </button>
           <a class="navbar-brand" href="#">Parqueadero Rayo Carro</a>
         </div>
-
-        <div class="jumbotron">
-          
-        </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">            
             <li class="active"><a href="{!! url('index/index'); !!}">Registro Principal<span class="sr-only">(current)</span><span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>            
             <li><a href="{!! url('vehiculos/vehiculos'); !!}">Vehículos <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
             <li><a href="{!! url('personas/personas'); !!}">Clientes <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
-            <li><a href="{!! url('personas/personas'); !!}">informes <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>
+            <li><a href="{!! url('informes/informes'); !!}">informes <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>
             <li><a href="{!! url('usuarios/usuarios'); !!}">Usuarios y permisos <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>
             <li><a href="{!! url('categoriasUsuario/categoriasUsuarios'); !!}">tipos de usuarios <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>           
           </ul>
