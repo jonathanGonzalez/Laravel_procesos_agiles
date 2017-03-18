@@ -1,0 +1,18 @@
+Daily meeting 08-03-2017
+Jhonathan González Aguirre
+
+1) Qué se hizo ayer?
+
+-se instaló y configuro Laravel
+
+2) Que se hará hoy?
+
+Finalizar la configuración del entorno de desarrollo, incluyendo versionamiento en Git y sincronización con github(https://github.com/jonathanGonzalez/Laravel_procesos_agiles/) 
+
+3) Que problemas se han tenido?
+
+07/03/2017 - Hubo problemas en la finalización de la configuración de Laravel pues existía una instalación
+previa de PHP con una versión no soportada por laravel inferior a php 5.6 
+
+08/03/2017 - algunos problemas en la sincronización con github, falta de conocimiento de los comandos, fácil solución.
+

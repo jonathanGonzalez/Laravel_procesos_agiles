@@ -1,0 +1,33 @@
+Sprint retrospective 14/03/2017
+Jhonathan González Aguirre
+
+Por mejorar en el proceso:
+
+1. se debe considerar no hacer tareas que no esten en el plan del día que puedan desviar la atención
+ en lo verdaderamente importante en el caso de las vistas, se intento implementar una plantilla y 
+no tuvo resultado, lo que afecto el proceso y amplio el tiempo de trabajo
+considerado en el plan.
+
+2. Falto elaborar una arquitectura simple del sistema que incluyera comprender las tecnologías antes de
+usarlas, conocer versiones y dependencias de una tecnología con otra, específicamente el proceso se vio afectado por no haber
+elaborado un borrador inicial de una arquitectura donde se definieran las versiones php y Laravel claramente. 
+Al configurar laravel no tuve en cuenta las versiones y requerimientos, se intento utilizar una versión de php que estaba en el
+sistema previamente lo que no funciono, posteriormente se investigaron los requisitos previos de instalación de laravel
+y se concluyo que debia instalarse otra versión de PHP. los requerimientos específicos encontrados en https://laravel.com/docs/5.4
+fueron:
+
+Servidor con:
+	PHP >= 5.6.4
+	OpenSSL PHP Extension
+	PDO PHP Extension
+	Mbstring PHP Extension
+	Tokenizer PHP Extension
+	XML PHP Extension
+
+3. Falto preguntar al "product owner" con claridad un requerimiento ambiguo en el enunciado: 
+cuando se habla de "gestión básica de usuarios" la palabra "usuarios" se refiere a los clientes usuarios 
+del parqueadero o a los usuarios del sistema(con privilegios y lo correspondiente).
+
+Tal vez no es necesario un crud de clientes ya que agrega complejidad al usuario
+ de forma que debe hacer un paso más antes del registro de una entrada/salida de un vehículo, debería 
+ingresar una persona y un vehiculo previamente.(La gravedad es baja, puede impactar en lo que espera el product owner)

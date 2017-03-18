@@ -1,0 +1,22 @@
+Daily meeting 09-03-2017
+Jhonathan González Aguirre
+
+1) Qué se hizo ayer?
+se Finalizó la configuración del entorno de desarrollo
+
+2) Que se hará hoy?
+
+- crear el modelo de datos
+- crear los controladores
+- crear las rutas
+- crear las interfaces
+
+
+3) Que problemas se han tenido?
+
+07/03/2017 - Hubo problemas en la finalización de la configuración de Laravel pues existía una instalación
+previa de PHP con una versión no soportada por laravel inferior a php 5.6 
+
+08/03/2017 - algunos problemas en la sincronización con github, falta de conocimiento de los comandos, fácil solución.
+
+09/03/2017 - No se registro

@@ -1,0 +1,17 @@
+Daily meeting 07-03-2017
+Jhonathan González Aguirre
+
+1) Qué se hizo ayer?
+-Se inicio el trabajo en el proyecto
+-Se descargaron todos los archivos necesarios para la instalación de el entorno de desarrollo.
+-se instaló git
+-se instaló composer
+
+2) Que se hará hoy?
+
+Finalizar la configuración del entorno de desarrollo
+
+3) Que problemas se han tenido?
+
+07/03/2017 - Hubo problemas en la finalización de la configuración de Laravel pues existía una instalación
+previa de PHP con una versión no soportada por laravel inferior a php 5.6 

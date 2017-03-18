@@ -1,4 +1,5 @@
-# Laravel_procesos_agiles
+﻿# Laravel_procesos_agiles.
+
 Proyecto del curso "Procesos Ágiles de Desarrollo de Software" en la Maestría en gestión y desarrollo de proyectos de software - UAM
 
 Aplicación web construida en Laravel 5 que soluciona el siguiente enunciado: 
