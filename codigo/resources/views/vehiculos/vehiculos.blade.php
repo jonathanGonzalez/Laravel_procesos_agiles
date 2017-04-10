@@ -1,56 +1,28 @@
+
 @extends('layouts.app')
-
-@section('vehiculosActive')
-
-active
-
+@section('personasActive')
+    active
 @stop
-
 @section('contenido')
+<h1>Agregar vehículo</h1>
+<p class="lead">Set the information of the new user.</p>
+<hr>
+{!! Form::open(['route' => 'vehiculos.store']) !!}
 
-<form class="form">
-  <div class="form-group">
-    <label for="exampleInputName2">Placa</label>
-    <input name="placa" type="text" class="form-control" id="exampleInputName2" >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName2">Marca</label>
-    <input name="marca" type="text" class="form-control" id="exampleInputName2" >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName2">Color</label>
-    <input type="text" class="form-control" id="exampleInputName2" >
-  </div>   
-  <button type="submit" class="btn btn-default">Registrar Vehiculo</button>
-</form>
+<div class="form-group">
+ {!! Form::label('marca_lbl', 'Marca', ['class' => 'control-label']) !!}
+ {!! Form::text('marca', null, ['class' => 'form-control']) !!}
+</div>
+<div class="form-group">
+ {!! Form::label('placa_lbl', 'Placa', ['class' => 'control-label']) !!}
+ {!! Form::text('placa', null, ['class' => 'form-control']) !!}
+</div>
 
-<div class="row">
-  <div style="height:50px;" class="col-md-12">
-  </div>
-<div>
+<div class="form-group">
+ {!! Form::label('name_lbl', 'Color', ['class' => 'control-label']) !!}
+ {!! Form::text('color', null, ['class' => 'form-control']) !!}
+</div>
 
-<table class="table" border="1">
-<tr>
-  <th>Placa</th>
-  <th>Marca</th>
-  <th>Color</th>
-  <th></th> 
-  <th></th>
-</tr>
-<tr> 
-  <td>cgf545</td>
-  <td>Jeep</td>
-  <td>Cafe</td>
-  <th><span class="btn btn-primary">Editar</span></th>
-  <th><span class="btn btn-primary">Eliminar</span></th>
-</tr>
-<tr>
-  <td>ffr548</td>
-  <td>Maserati</td>
-  <td>Blanco</td>
-  <th><span class="btn btn-primary">Editar</span></th>
-  <th><span class="btn btn-primary">Eliminar</span></th>
-</tr>
-</table>
-
+{!! Form::submit('Agregar vehiculo', ['class' => 'btn btn-primary']) !!}
+{!! Form::close() !!}
 @stop

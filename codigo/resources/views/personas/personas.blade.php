@@ -8,7 +8,7 @@ active
 
 @section('contenido')
 
-<form class="form">
+<!--<form class="form">
   <div class="form-group">
     <label for="exampleInputName2">Nombre</label>
     <input type="text" class="form-control" id="exampleInputName2" >
@@ -26,7 +26,31 @@ active
     <input type="text" class="form-control" id="exampleInputName2" >
   </div>    
   <button type="submit" class="btn btn-default">Registrar Cliente</button>
-</form>
+</form>-->
+
+{!! Form::open(['route' => 'personas.store']) !!}
+    <div class="form-group">
+        {!! Form::label('nombre_lbl', 'Nombre', ['class' => 'control-label']) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('apellidos_lbl', 'Apellidos', ['class' => 'control-label']) !!}
+        {!! Form::text('apellidos', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('cedula_lbl', 'Número Cédula', ['class' => 'control-label']) !!}
+        {!! Form::text('cedula', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('telefono_lbl', 'Teléfono', ['class' => 'control-label']) !!}
+        {!! Form::text('telefono', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('correo_lbl', 'Correo', ['class' => 'control-label']) !!}
+        {!! Form::text('correo', null, ['class' => 'form-control']) !!}
+    </div>
+    {!! Form::submit('Create New User', ['class' => 'btn btn-primary']) !!}
+{!! Form::close() !!}
 
 <div class="row">
   <div style="height:50px;" class="col-md-12">

@@ -8,7 +8,7 @@ active
 
 @section('contenido')
 
-<form class="form">
+<!--<form class="form">
   <div class="form-group">
     <label for="exampleInputName2">Nombre</label>
     <input type="text" class="form-control" id="exampleInputName2" >
@@ -39,7 +39,23 @@ active
 <div class="row">
   <div style="height:50px;" class="col-md-12">
   </div>
-<div>
+<div>-->
+
+{!! Form::open(['route' => 'usuarios.store']) !!}
+    <div class="form-group">
+        {!! Form::label('name', 'Nombre', ['class' => 'control-label']) !!}
+        {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('email', 'Correo', ['class' => 'control-label']) !!}
+        {!! Form::text('email', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('password', 'Contraseña', ['class' => 'control-label']) !!}
+        {!! Form::password('password', ['class' => 'form-control']) !!}
+    </div>
+    {!! Form::submit('Create New User', ['class' => 'btn btn-primary']) !!}
+{!! Form::close() !!}
 
 <table class="table" border="1">
 <tr>
