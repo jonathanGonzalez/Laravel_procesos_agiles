@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index/index');
-});
 
+Route::get('/', 'IndexController@index');
 Route::get('index/index', 'IndexController@index');
 Route::get('personas/personas', 'PersonasController@personas');
 Route::get('vehiculos/vehiculos', 'VehiculosController@vehiculo');
@@ -27,4 +25,5 @@ Route::resource('usuarios', 'UsuariosController');
 Route::resource('personas', 'PersonasController');
 Route::resource('vehiculos', 'vehiculosController');
 Route::resource('parqueos', 'indexController');
+
 

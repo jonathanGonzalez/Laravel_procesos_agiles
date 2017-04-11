@@ -57,31 +57,27 @@ active
   </div>
 <div>
 
-<table class="table" border="1">
-<tr>
-  <th>Nombre</th>
-  <th>Apellido</th>
-  <th>Cédula</th>
-  <th>Telefono</th>
-  <th></th> 
-  <th></th>
-</tr>
-<tr> 
-  <td>Juan</td>
-  <td>Valdez C.</td>
-  <td>5445580254</td>
-  <td>878455545</td> 
-  <th><span class="btn btn-primary">Editar</span></th>
-  <th><span class="btn btn-primary">Eliminar</span></th>
-</tr>
-<tr>
-  <td>Juan Pablo</td>
-  <td>Segundo C.</td>
-  <td>00000000112</td>
-  <td>878455545</td> 
-  <th><span class="btn btn-primary">Editar</span></th>
-  <th><span class="btn btn-primary">Eliminar</span></th>
-</tr>
-</table>
+<div class="row">
+  <table class="table" border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Cédula</th>
+    <th>teléfono</th>
+    <th>Correo</th> 
+    <th></th>
+  </tr>
+  @foreach($list as $persona)
+  <tr>
+    <td>{{ $persona->nombre }}</td>
+    <td>{{ $persona->apellidos }}</td>
+    <td>{{ $persona->cedula }}</td>
+    <td>{{ $persona->telefono }}</td>
+    <td>{{ $persona->correo }}</td>    
+    <th><span class="btn btn-primary">registrar salida</span></th>
+  </tr>
+  @endforeach
+  </table>
+</div>
 
 @stop

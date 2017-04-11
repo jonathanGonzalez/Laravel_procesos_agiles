@@ -10,13 +10,10 @@ class UsuariosController extends Controller
     //
     public function usuarios()
     {
-        return view('usuarios/usuarios');
+        $usuario = User::all();
+        return view('usuarios/usuarios', ['list' => $usuario]);
     }
-    public function create(Request $request)
-    {
-        return view('usuarios/usuarios');
-    }
-    public function store(Request $request)
+        public function store(Request $request)
     {
             //echo "si funcion store en clase UsuariosController";
             $input = $request->all();

@@ -8,13 +8,14 @@ use App\Persona;
 class PersonasController extends Controller
 {
     public function personas()
-    {
-        return view('personas/personas');
+    {        
+        $personas = Persona::all();
+        return view('personas/personas', ['list' => $personas]);
     }
     public function store(Request $request)
     {
-            $input = $request->all();
-            Persona::create($input);
-            return redirect('/');
+        $input = $request->all();
+        Persona::create($input);
+        return redirect('/');
     }
 }

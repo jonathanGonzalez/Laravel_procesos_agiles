@@ -78,7 +78,7 @@ active
 
 {!! Form::submit('Registrar', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
-<p>
+
 <div class="row">
   <table class="table" border="1">
   <tr>
@@ -89,22 +89,16 @@ active
     <th>Hora de salida</th> 
     <th></th>
   </tr>
+  @foreach($list as $registro)
   <tr>
-    <td>cgf545</td>
-    <td><a href="{!! url('personas/personas'); !!}">Juan Valdez C.</a></td>
-    <td>28/03/2017</td>
-    <td>11:45</td>
+    <td>{{ $registro->vehiculo_id }}</td>
+    <td><a href="{!! url('personas/personas'); !!}">{{ $registro->persona_id }}</a></td>
+    <td>{{ $registro->fecha }}</td>
+    <td>{{ $registro->hora }}</td>
     <td>SIN REGISTRAR</td> 
     <th><span class="btn btn-primary">registrar salida</span></th>
   </tr>
-  <tr>
-    <td>ffr548</td>
-    <td><a href="{!! url('personas/personas'); !!}">Juan Pablo S.</a></td>
-    <td>28/03/2017</td>
-    <td>11:00</td>
-    <td>11:25</td> 
-    <th><span class="btn btn-primary">registrar salida</span></th>
-  </tr>
+  @endforeach
   </table>
 </div>
 

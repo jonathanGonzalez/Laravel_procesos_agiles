@@ -9,13 +9,19 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view('index/index');
+        $parqueos = Parqueo::all();
+        return view('index/index', ['list' => $parqueos]);
     }
     public function store(Request $request)
     {
         $input = $request->all();
         Parqueo::create($input);
         return redirect('/');
+    }
+    public function LeerParqueos()
+    {
+        $parqueos = Parqueo::all();
+        return view('index/index', ['list' => $parqueos]);
     }
 }
 

@@ -10,7 +10,8 @@ class VehiculosController extends Controller
     //
     public function vehiculo()
     {   
-        return view('vehiculos/vehiculos');
+        $vehiculos = Vehiculo::all();        
+        return view('vehiculos/vehiculos', ['list' => $vehiculos]);
     }
     public function informes()
     {
