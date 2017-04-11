@@ -16,4 +16,10 @@ class Persona extends Model
      */
     //protected $hidden = ['password', 'remember_token'];
     protected $table = 'personas';
+
+    public function parqueos()
+    {
+        return $this->hasMany('App\Parqueo');
+    }
+
 }

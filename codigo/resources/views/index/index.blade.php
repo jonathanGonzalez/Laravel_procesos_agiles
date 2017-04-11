@@ -7,7 +7,7 @@ active
 @stop
 
 @section('contenido')
-<div class="row">
+<!--<div class="row">
   <form class="form">
     <div class="form-group">
       <label for="exampleInputName2">fecha</label>
@@ -43,8 +43,42 @@ active
 <div class="row">
   <div style="height:50px;" class="col-md-12">
   </div>
-<div>
+<div>-->
 
+{!! Form::open(['route' => 'parqueos.store']) !!}
+
+<div class="form-group">
+ {!! Form::label('fecha_lbl', 'Fecha:', ['class' => 'control-label']) !!}
+ {!! Form::text('fecha', null, ['class' => 'form-control']) !!}
+</div>
+<div class="form-group">
+ {!! Form::label('hora_lbl', 'Hora:', ['class' => 'control-label']) !!}
+ {!! Form::text('hora', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+ {!! Form::label('tipo_lbl', 'Tipo(Entrada o salida)', ['class' => 'control-label']) !!}
+ {!! Form::text('tipo', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+ {!! Form::label('persona_lbl', 'Cliente', ['class' => 'control-label']) !!}
+ {!! Form::text('persona_id', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+ {!! Form::label('vehiculo_lbl', 'Vehiculo', ['class' => 'control-label']) !!}
+ {!! Form::text('vehiculo_id', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+ {!! Form::label('usuario_lbl', 'usuario', ['class' => 'control-label']) !!}
+ {!! Form::text('usuario_id', null, ['class' => 'form-control']) !!}
+</div>
+
+{!! Form::submit('Registrar', ['class' => 'btn btn-primary']) !!}
+{!! Form::close() !!}
+<p>
 <div class="row">
   <table class="table" border="1">
   <tr>

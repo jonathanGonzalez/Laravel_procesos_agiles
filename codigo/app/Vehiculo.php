@@ -10,4 +10,8 @@ class Vehiculo extends Model
     protected $fillable = ['id','marca','placa','color'];
     protected $table = 'vehiculos';
    
+   public function parqueos()
+    {
+        return $this->hasMany('App\Parqueo');
+    }
 }

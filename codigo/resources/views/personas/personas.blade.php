@@ -49,7 +49,7 @@ active
         {!! Form::label('correo_lbl', 'Correo', ['class' => 'control-label']) !!}
         {!! Form::text('correo', null, ['class' => 'form-control']) !!}
     </div>
-    {!! Form::submit('Create New User', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Crear un nuevo cliente', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
 
 <div class="row">

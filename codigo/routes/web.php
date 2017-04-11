@@ -26,4 +26,5 @@ Route::post('vehiculos/insertar', 'VehiculosController@store');
 Route::resource('usuarios', 'UsuariosController');
 Route::resource('personas', 'PersonasController');
 Route::resource('vehiculos', 'vehiculosController');
+Route::resource('parqueos', 'indexController');
 

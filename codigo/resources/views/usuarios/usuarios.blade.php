@@ -54,8 +54,10 @@ active
         {!! Form::label('password', 'Contraseña', ['class' => 'control-label']) !!}
         {!! Form::password('password', ['class' => 'form-control']) !!}
     </div>
-    {!! Form::submit('Create New User', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Crear nuevo usuario', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
+<p>
+</p>
 
 <table class="table" border="1">
 <tr>

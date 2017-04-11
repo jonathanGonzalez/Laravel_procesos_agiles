@@ -24,9 +24,9 @@ class User extends Authenticatable
     protected $hidden = ['password', 'remember_token'];
     protected $table = 'users';
 
-    /**public function vehiculos()
+    public function parqueos()
     {
-        return $this->hasOne('App\vehiculos');
-    }**/
+        return $this->hasMany('App\Parqueo');
+    }
     
 }
