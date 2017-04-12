@@ -18,6 +18,7 @@ Route::get('personas/personas', 'PersonasController@personas');
 Route::get('vehiculos/vehiculos', 'VehiculosController@vehiculo');
 Route::get('informes/informes', 'InformesController@informes');
 Route::get('usuarios/usuarios', 'UsuariosController@usuarios');
+
 Route::post('vehiculos', 'VehiculosController@vehiculo');
 Route::post('vehiculos/insertar', 'VehiculosController@store');
 
