@@ -7,31 +7,31 @@ active
 @stop
 @section('contenido')
 
-<table class="table" border="1">
-<tr>
-  <th>Placa</th>
-  <th>Cliente</th>
-  <th>fecha</th>
-  <th>Hora Ingreso</th>
-  <th>Hora de salida</th> 
-  <th></th>
-</tr>
-<tr>
-  <td>cgf545</td>
-  <td><a href="{!! url('personas/personas'); !!}">Juan Valdez C.</a></td>
-  <td>28/03/2017</td>
-  <td>11:45</td>
-  <td>SIN REGISTRAR</td> 
-  <th><span class="btn btn-primary">generar informe</span></th>
-</tr>
-<tr>
-  <td>ffr548</td>
-  <td><a href="{!! url('personas/personas'); !!}">Juan Pablo S.</a></td>
-  <td>28/03/2017</td>
-  <td>11:00</td>
-  <td>11:25</td> 
-  <th><span class="btn btn-primary">generar informe</span></th>
-</tr>
-</table>
+<div class="row">
+  <table class="table" border="1">
+  <tr>
+    <th>Placa</th>
+    <th>Cliente</th>
+    <th>fecha</th>
+    <th>Hora Ingreso</th>
+    <th>Hora de salida</th> 
+    <th></th>
+  </tr>
+    @foreach($list as $registro)
+  <tr>
+    <td>{{ $registro->vehiculo_id }}</td>
+    <td>{{ $registro->persona_id }}</td>
+    <td>{{ $registro->fecha }}</td>
+    <td>{{ $registro->hora_entrada }}</td>
+    <th>@if($registro->hora_salida === "" or $registro->hora_salida === null  )
+          <a href="{!! route('parqueos.edit', $registro->id) !!}" class="btn btn-primary">Registrar Salida</span></th>
+        @else
+          {{ $registro->hora_salida}}
+        @endif
+    <th><a href="{!! route('parqueos.edit', $registro->id) !!}" class="btn btn-primary">Editar registros de parqueo</span></th>
+  </tr>
+  @endforeach
+  </table>
+</div>
 
 @stop
