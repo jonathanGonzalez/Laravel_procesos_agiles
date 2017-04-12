@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parqueo extends Model
 {
-    protected $fillable = ['id','fecha','hora','tipo', 'persona_id', 'vehiculo_id', 'usuario_id'];
+    protected $fillable = ['id','fecha','hora_entrada','hora_salida', 'persona_id', 'vehiculo_id', 'usuario_id'];
     protected $table = 'parqueos';
 
     public function personas()

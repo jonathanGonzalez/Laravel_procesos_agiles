@@ -16,8 +16,8 @@ class CreateParqueosTable extends Migration
         Schema::create('parqueos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fecha')->nullable();
-            $table->string('hora')->nullable();            
-            $table->string('tipo')->nullable();
+            $table->string('hora_entrada')->nullable();            
+            $table->string('hora_salida')->nullable();
             $table->timestamps();
 
             $table->integer('persona_id')->unsigned();
