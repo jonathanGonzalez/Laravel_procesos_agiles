@@ -1,0 +1,9 @@
+Sprint retrospective 08/04/2017
+
+Posiblemente no es necesario un CRUD de clientes ya que agrega complejidad al usuario de forma que debe hacer un paso más antes del registro de una entrada/salida de un vehículo, debería ingresar una persona y un vehículo previamente. (La gravedad es baja, puede impactar en lo que espera el product owner)
+
+No se validaron oportunamente los requerimientos, la entrega realizada asume que los requerimientos, principalmente el descrito en el párrafo anterior, están bien definidos.
+
+Scrum define una participación activa del product owner y la responsabilidad del Scrum master de resolver dudas y dar garantías a los desarrolladores, falto articular correctamente los roles ya que no se presentaron las dudas al product owner (en el presente proyecto los docentes). 
+
+PARA FUTUROS SPRINT: Antes de ejecutar cualquier actividad se debe estar seguro de que el objetivo es claro y el resultado esperado está bien definido, no se debe codificar ninguna función sobre la cual exista alguna duda y la cual pueda tener impactos negativos en la arquitectura del sistema o cause la modificación amplia de la misma.
