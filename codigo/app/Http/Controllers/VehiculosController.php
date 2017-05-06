@@ -52,6 +52,6 @@ class VehiculosController extends Controller
             Session::flash('flash_message', "el vehiculo con id: ($id) no fue encontrado!");
             return redirect()->back();
         }
-    }
+    }   
     
 }

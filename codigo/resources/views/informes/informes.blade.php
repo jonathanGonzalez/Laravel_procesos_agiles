@@ -7,31 +7,17 @@ active
 @stop
 @section('contenido')
 
-<div class="row">
-  <table class="table" border="1">
-  <tr>
-    <th>Placa</th>
-    <th>Cliente</th>
-    <th>fecha</th>
-    <th>Hora Ingreso</th>
-    <th>Hora de salida</th> 
-    <th></th>
-  </tr>
-    @foreach($list as $registro)
-  <tr>
-    <td>{{ $registro->vehiculo_id }}</td>
-    <td>{{ $registro->persona_id }}</td>
-    <td>{{ $registro->fecha }}</td>
-    <td>{{ $registro->hora_entrada }}</td>
-    <th>@if($registro->hora_salida === "" or $registro->hora_salida === null  )
-          <a href="{!! route('parqueos.edit', $registro->id) !!}" class="btn btn-primary">Registrar Salida</span></th>
-        @else
-          {{ $registro->hora_salida}}
-        @endif
-    <th><a href="{!! route('parqueos.edit', $registro->id) !!}" class="btn btn-primary">Editar registros de parqueo</span></th>
-  </tr>
-  @endforeach
-  </table>
-</div>
+{!! Form::open(['url' => 'informes/reportes', 'method' => 'put']) !!}
+    <div class="form-group">
+        {!! Form::label('fecha_inicial_lbl', 'Fecha Inicial reporte', ['class' => 'control-label']) !!}
+        {!! Form::text('fechaI', null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('fecha_final_lbl', 'Fecha final reporte', ['class' => 'control-label']) !!}
+        {!! Form::text('fechaF', null, ['class' => 'form-control']) !!}
+    </div>    
+        {!! Form::submit('consultar registros', ['class' => 'btn btn-primary']) !!}
+{!! Form::close() !!}
+
 
 @stop
