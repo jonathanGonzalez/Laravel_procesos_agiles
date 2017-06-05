@@ -28,8 +28,8 @@ Route::post('vehiculos/insertar', 'VehiculosController@store');
 Route::resource('informes', 'InformesController');
 Route::resource('usuarios', 'UsuariosController');
 Route::resource('personas', 'PersonasController');
-Route::resource('vehiculos', 'vehiculosController');
-Route::resource('parqueos', 'indexController');
+Route::resource('vehiculos', 'VehiculosController');
+Route::resource('parqueos', 'IndexController');
 
 
 });
