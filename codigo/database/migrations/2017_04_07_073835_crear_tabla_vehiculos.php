@@ -15,6 +15,7 @@ class CrearTablaVehiculos extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->increments('id'); // *
+            $table->string('tipo')->nullable();
             $table->string('marca')->nullable();        
             $table->string('placa')->nullable();
             $table->string('color')->nullable();

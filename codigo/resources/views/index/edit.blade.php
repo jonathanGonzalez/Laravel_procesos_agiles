@@ -19,7 +19,8 @@
 </div>
 <div class="form-group">
  {!! Form::label('hora_salida_lbl', 'Hora de salida:', ['class' => 'control-label']) !!}
- {!! Form::text('hora_salida', null, ['class' => 'form-control']) !!}
+ <!--{!! Form::text('hora_salida', null, ['class' => 'form-control']) !!}-->
+ {!! Form::time('hora_salida', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
 </div>
 <div class="form-group">
  {!! Form::label('persona_lbl', 'Cliente', ['class' => 'control-label']) !!}

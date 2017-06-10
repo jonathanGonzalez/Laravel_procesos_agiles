@@ -21,6 +21,10 @@
     {!! Form::text('marca', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group">
+    {!! Form::label('tipo_lbl', 'Tipo Vehículo', ['class' => 'control-label']) !!}
+    {!! Form::text('tipo', null, ['class' => 'form-control', 'required']) !!}
+    </div>
+    <div class="form-group">
     {!! Form::label('placa_lbl', 'Placa', ['class' => 'control-label']) !!}
     {!! Form::text('placa', null, ['class' => 'form-control', 'required']) !!}
     </div>
@@ -37,6 +41,7 @@
     <table class="table text-center center-block" border="0">
     <tr>
       <th>Marca</th>
+      <th>Tipo Vehículo</th>
       <th>Placa</th>
       <th>Color</th>    
       <th></th>
@@ -45,6 +50,7 @@
     @foreach($list as $vehiculo)
     <tr>
       <td>{{ $vehiculo->marca }}</td>    
+      <td>{{ $vehiculo->tipo }}</td>    
       <td>{{ $vehiculo->placa }}</td>
       <td>{{ $vehiculo->color }}</td>    
       <th><a href="{!! route('vehiculos.edit', $vehiculo->id) !!}" class="btn btn-primary">Editar vehiculo</span></th>
