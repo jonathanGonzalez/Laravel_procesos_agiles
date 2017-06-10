@@ -25,7 +25,8 @@ class IndexController extends Controller
     {
         $input = $request->all();
         Parqueo::create($input);
-        return redirect('/');
+        Session::flash('flash_message', "Se almacenó el registro!");
+        return redirect()->back();
     }
     public function LeerParqueos()
     {

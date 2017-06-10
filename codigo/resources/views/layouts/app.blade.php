@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -23,10 +24,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top bg-primary">
             <div class="container">
                 <div class="navbar-header">
-
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="{{ asset('img/parking-icon.png')}}">
+                    </a>
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -47,11 +50,11 @@
                         &nbsp;
                     </ul>
                     <ul class="nav navbar-nav">            
-                        <li class="@yield('indexActive')" ><a href="{!! url('index/index'); !!}">Registro Principal <span class="glyphicon glyphicon glyphicon-random" aria-hidden="true"> </span></a></li>            
-                        <li class="@yield('vehiculosActive')"><a href="{!! url('vehiculos/vehiculos'); !!}">Vehículos <span class="glyphicon glyphicon glyphicon-road" aria-hidden="true"></span></a></li>
-                        <li class="@yield('personasActive')"><a href="{!! url('personas/personas'); !!}">Clientes <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
-                        <li class="@yield('informesActive')"><a href="{!! url('informes/informes'); !!}">informes <span class="glyphicon glyphicon glyphicon-zoom-in" aria-hidden="true"></span></a></li>
-                        <li class="@yield('usuariosActive')"><a href="{!! url('usuarios/usuarios'); !!}">Usuarios y permisos <span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>          
+                        <li class="@yield('indexActive')" ><a href="{!! url('index/index'); !!}">Registro Principal &nbsp;<span class="glyphicon glyphicon glyphicon-random" aria-hidden="true"> </span></a></li>            
+                        <li class="@yield('vehiculosActive')"><a href="{!! url('vehiculos/vehiculos'); !!}">Vehículos &nbsp;<span class="glyphicon glyphicon glyphicon-road" aria-hidden="true"></span></a></li>
+                        <li class="@yield('personasActive')"><a href="{!! url('personas/personas'); !!}">Clientes &nbsp;<span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                        <li class="@yield('informesActive')"><a href="{!! url('informes/informes'); !!}">informes &nbsp;<span class="glyphicon glyphicon glyphicon-zoom-in" aria-hidden="true"></span></a></li>
+                        <li class="@yield('usuariosActive')"><a href="{!! url('usuarios/usuarios'); !!}">Usuarios &nbsp;<span class="glyphicon glyphicon glyphicon glyphicon-wrench" aria-hidden="true"></span></a></li>          
                     </ul>
 
                     <!-- Right Side Of Navbar -->

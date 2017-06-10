@@ -5,19 +5,25 @@
 @stop
 
 @section('contenido')
+<div class="alert alert-info" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    En esta sección puedes gestionar tus <strong>vehículos</strong>.
+</div>
 
 {!! Form::open(['route' => 'usuarios.store']) !!}
     <div class="form-group">
         {!! Form::label('name', 'Nombre', ['class' => 'control-label']) !!}
-        {!! Form::text('name', null, ['class' => 'form-control']) !!}
+        {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('email', 'Correo', ['class' => 'control-label']) !!}
-        {!! Form::text('email', null, ['class' => 'form-control']) !!}
+        {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('password', 'Contraseña', ['class' => 'control-label']) !!}
-        {!! Form::password('password', ['class' => 'form-control']) !!}
+        {!! Form::password('password', ['class' => 'form-control', 'required']) !!}
     </div>
     {!! Form::submit('Crear nuevo usuario', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}

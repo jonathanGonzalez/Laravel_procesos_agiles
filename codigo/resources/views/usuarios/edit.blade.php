@@ -5,7 +5,9 @@
 @stop
 
 @section('contenido')
-<h4>Editar usuario</h4>
+<h1>Editar Usuario</h1>
+<p></p>
+<hr>
 {!! Form::model($data, ['method' => 'PUT', 'route' => ['usuarios.update', $data->id]]) !!}
     <div class="form-group">
         {!! Form::label('name', 'Nombre', ['class' => 'control-label']) !!}

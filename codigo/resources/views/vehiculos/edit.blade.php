@@ -4,7 +4,7 @@
     active
 @stop
 @section('contenido')
-<h1>Agregar vehículo</h1>
+<h1>Editar vehículo</h1>
 <p></p>
 <hr>
 {!! Form::model($data, ['method' => 'PUT', 'route' => ['vehiculos.update', $data->id]]) !!}

@@ -5,32 +5,47 @@
 @stop
 
 @section('contenido')
+<div class="alert alert-info" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    En el menú de la parte superior encuentras las principales seccciones del <strong>SIGP</strong>.
+</div> 
 
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    Para registrar un ingreso debe crearse previamente un <strong>cliente</strong> y un <strong>vehículo</strong>.
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-md-3 text-left">
 {!! Form::open(['route' => 'parqueos.store']) !!}
 <div class="form-group">
  {!! Form::label('fecha_lbl', 'Fecha:', ['class' => 'control-label']) !!}
- {!! Form::text('fecha', $fecha, ['class' => 'form-control']) !!}
+ {!! Form::date('fecha', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
 </div>
 <div class="form-group">
  {!! Form::label('hora_lbl', 'Hora de ingreso:', ['class' => 'control-label']) !!}
- {!! Form::text('hora_entrada', $hora, ['class' => 'form-control']) !!}
+ {!! Form::time('hora_entrada', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
 </div>
 <div class="form-group">
  {!! Form::label('persona_lbl', 'Cliente', ['class' => 'control-label']) !!}
- {!! Form::select('persona_id', $clientes, ['class' => 'form-control']) !!}
+ {!! Form::select('persona_id', $clientes, ['class' => 'form-control', 'required']) !!}
 </div>
 <div class="form-group">
  {!! Form::label('vehiculo_lbl', 'Vehiculo', ['class' => 'control-label']) !!}
- {!! Form::select('vehiculo_id', $vehiculos, ['class' => 'form-control']) !!}
+ {!! Form::select('vehiculo_id', $vehiculos, ['class' => 'form-control', 'required']) !!}
 </div>
 <div class="form-group">
  {!! Form::hidden('usuario_id', "1", ['class' => 'form-control']) !!}
 </div>
 {!! Form::submit('Registrar nuevo ingreso', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
-<p></p>
-<div class="row">
-  <table class="table" border="0">
+</div>
+<div class="col-xs-12 col-md-9">
+<table class="table" border="0">
   <tr>
     <th>Placa</th>
     <th>Cliente</th>
@@ -55,5 +70,31 @@
   @endforeach
   </table>
 </div>
-
+<p></p>
+<div class="row" style="height:300px;">
+  
+</div>
+<div class="row">
+  <figure class="snip1543">
+    <img src="{{ asset('img/carros.jpg') }}"/>
+    <figcaption>
+    <h3>SIGP Rayo Carro</h3>
+    <p>Sistema de información para la gestión de registros de ingreso y salida de vehículos.</p>
+    </figcaption>    
+  </figure>
+  <figure class="snip1543">
+    <img src="{{ asset('img/informes.jpg') }}"/>
+    <figcaption>
+    <h3>Control</h3>
+    <p>Conoce los registros de ingreso y de salida de tu parqueadero </p>
+    </figcaption>    
+  </figure>
+  <figure class="snip1543">
+    <img src="{{ asset('img/potencial.jpg') }}"/>
+    <figcaption>
+    <h3>Gestión de la información</h3>
+    <p>Toma mejores desiciones para tu empresa. </p>
+    </figcaption>    
+  </figure>
+</div>
 @stop

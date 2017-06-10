@@ -18,11 +18,15 @@ class InformesController extends Controller
         $fechaF = $request->input('fechaF');
         
         // el formato del formulario blade es d m y diferente al formato de bd que es "Y m d"
-        Carbon::parse($fechaI)->format('Y/m/d');
-        Carbon::parse($fechaF)->format('Y/m/d');
+        //Carbon::parse($fechaI)->format('Y/m/d');
+        //Carbon::parse($fechaF)->format('Y/m/d');
 
-        $registros = Parqueo::where('fecha', $fechaI)->get();   
-        $registros = Parqueo::where('fecha', '>=', $fechaI)->orWhere('fecha', '<=', $fechaF)->get();
+        // $registros = Parqueo::where('fecha', $fechaI)->get();   
+        // $registros = Parqueo::where('fecha', '>=', $fechaI)->orWhere('fecha', '<=', $fechaF)->get();
+        $registros = Parqueo::where( 'fecha', '>=', $fechaI )
+                    ->where( 'fecha', '<=', $fechaF)
+                    ->orderBy('fecha', 'desc')
+                    ->get();   
         
         return view('informes/informes', ['registrosEntreFechas' => $registros]);
     } 

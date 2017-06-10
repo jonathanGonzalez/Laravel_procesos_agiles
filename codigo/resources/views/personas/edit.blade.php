@@ -5,6 +5,9 @@
 @stop
 
 @section('contenido')
+<h1>Editar cliente</h1>
+<p></p>
+<hr>
 {!! Form::model($data, ['method' => 'PUT', 'route' => ['personas.update', $data->id]]) !!}
     <div class="form-group">
         {!! Form::label('nombre_lbl', 'Nombre', ['class' => 'control-label']) !!}

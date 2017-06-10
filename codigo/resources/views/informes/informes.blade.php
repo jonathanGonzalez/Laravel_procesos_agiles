@@ -57,4 +57,27 @@ active
         @endif        
 </div>
 </div>
+<div class="row">
+  <figure class="snip1543">
+    <img src="{{ asset('img/carros.jpg') }}"/>
+    <figcaption>
+    <h3>SIGP Rayo Carro</h3>
+    <p>Sistema de información para la gestión de registros de ingreso y salida de vehículos.</p>
+    </figcaption>    
+  </figure>
+  <figure class="snip1543">
+    <img src="{{ asset('img/informes.jpg') }}"/>
+    <figcaption>
+    <h3>Control</h3>
+    <p>Conoce los registros de ingreso y de salida de tu parqueadero </p>
+    </figcaption>    
+  </figure>
+  <figure class="snip1543">
+    <img src="{{ asset('img/potencial.jpg') }}"/>
+    <figcaption>
+    <h3>Gestión de la información</h3>
+    <p>Toma mejores desiciones para tu empresa. </p>
+    </figcaption>    
+  </figure>
+</div>
 @stop

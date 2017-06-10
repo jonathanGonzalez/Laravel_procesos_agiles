@@ -22,7 +22,7 @@ class VehiculosController extends Controller
     {
             $input = $request->all();
             Vehiculo::create($input);
-            return redirect('/');
+            return redirect('vehiculos/vehiculos');
     }
     public function edit($id)
     {           
