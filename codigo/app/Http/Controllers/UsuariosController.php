@@ -52,4 +52,18 @@ class UsuariosController extends Controller
             return redirect()->back();
         }
     }
+    public function destroy(Request $request, $id)
+    {           
+        try
+        {
+            $user = User::findOrFail($id);
+            $user->delete();
+            return redirect()->back();
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "Ocurrió un error, intente nuevamente o comuniquese con el administrador del sistema");
+            return redirect()->back();
+        }
+    }
 }

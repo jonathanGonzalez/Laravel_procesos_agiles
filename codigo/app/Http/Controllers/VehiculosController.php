@@ -52,6 +52,20 @@ class VehiculosController extends Controller
             Session::flash('flash_message', "el vehiculo con id: ($id) no fue encontrado!");
             return redirect()->back();
         }
-    }   
+    }
+    public function destroy(Request $request, $id)
+    {           
+        try
+        {
+            $vehiculo = Vehiculo::findOrFail($id);
+            $vehiculo->delete();
+            return redirect()->back();
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "Ocurrió un error, intente nuevamente o comuniquese con el administrador del sistema");
+            return redirect()->back();
+        }
+    }
     
 }

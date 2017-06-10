@@ -28,8 +28,7 @@ class PersonasController extends Controller
         }
         catch(ModelNotFoundException $e)
         {
-            Session::flash('flash_message', "The User ($id) could not be found to be
-            edited!");
+            Session::flash('flash_message', "El usuario para la actualización de datos no fué encontrado");
             return redirect()->back();
         }
     }
@@ -46,6 +45,20 @@ class PersonasController extends Controller
         catch(ModelNotFoundException $e)
         {
             Session::flash('flash_message', "el cliente con id:($id) no fue encontrado ");
+            return redirect()->back();
+        }
+    }
+    public function destroy(Request $request, $id)
+    {           
+        try
+        {
+            $persona = Persona::findOrFail($id);
+            $persona->delete();
+            return redirect()->back();
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "Ocurrió un erro, intente nuevamente o comuniquese con el administrador del sistema");
             return redirect()->back();
         }
     }

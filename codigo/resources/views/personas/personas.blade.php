@@ -13,7 +13,7 @@
 </div>
 
 <div class="row center-block">
-  <div class="col-xs-12 col-md-6 text-left">
+  <div class="col-xs-12 col-md-4 text-left">
     {!! Form::open(['route' => 'personas.store']) !!}
         <div class="form-group">
             {!! Form::label('nombre_lbl', 'Nombre', ['class' => 'control-label']) !!}
@@ -38,14 +38,15 @@
         {!! Form::submit('Crear un nuevo cliente', ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}
     </div>
-    <div class="col-xs-12 col-md-6">
-        <table class="table" border="0">
+    <div class="col-xs-12 col-md-8">
+        <table class="table responsive-table" border="0">
             <tr>
             <th>Nombre</th>
             <th>Apellidos</th>
             <th>Cédula</th>
             <th>teléfono</th>
             <th>Correo</th> 
+            <th></th>
             <th></th>
             </tr>
             @foreach($list as $persona)
@@ -56,6 +57,14 @@
             <td>{{ $persona->telefono }}</td>
             <td>{{ $persona->correo }}</td>    
             <th><a href="{!! route('personas.edit', $persona->id) !!}" class="btn btn-primary">Editar cliente</span></th>
+            <th>{!! Form::open([
+                'method' => 'DELETE',
+                'route' => ['personas.destroy', $persona->id]
+                ]) !!}
+                {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+                {!! Form::close() !!}
+            </th>
+            <!--<th><a href="{!! route('personas.destroy', $persona->id) !!}" class="btn btn-danger">Eliminar cliente</span></th>-->
             </tr>
             @endforeach
         </table>

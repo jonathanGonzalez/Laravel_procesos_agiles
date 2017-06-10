@@ -42,6 +42,13 @@
     <td>{{ $usuario->name }}</td>
     <td>{{ $usuario->email }}</td>
     <th><a href="{!! route('usuarios.edit', $usuario->id) !!}" class="btn btn-primary">Editar usuario</span></th>
+    <th>{!! Form::open([
+        'method' => 'DELETE',
+        'route' => ['usuarios.destroy', $usuario->id]
+        ]) !!}
+        {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+        {!! Form::close() !!}
+    </th>
   </tr>
   @endforeach
   </table>

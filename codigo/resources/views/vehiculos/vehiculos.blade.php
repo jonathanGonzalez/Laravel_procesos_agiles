@@ -40,6 +40,7 @@
       <th>Placa</th>
       <th>Color</th>    
       <th></th>
+      <th></th>
     </tr>
     @foreach($list as $vehiculo)
     <tr>
@@ -47,6 +48,13 @@
       <td>{{ $vehiculo->placa }}</td>
       <td>{{ $vehiculo->color }}</td>    
       <th><a href="{!! route('vehiculos.edit', $vehiculo->id) !!}" class="btn btn-primary">Editar vehiculo</span></th>
+      <th>{!! Form::open([
+            'method' => 'DELETE',
+            'route' => ['vehiculos.destroy', $vehiculo->id]
+            ]) !!}
+            {!! Form::submit('¿Borrar vehículo?', ['class' => 'btn btn-danger']) !!}
+            {!! Form::close() !!}
+        </th>
     </tr>
     @endforeach
     </table>
