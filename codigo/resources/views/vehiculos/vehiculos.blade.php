@@ -28,7 +28,7 @@
 {!! Form::close() !!}
 
 <div class="row">
-  <table class="table" border="1">
+  <table class="table" border="0">
   <tr>
     <th>Marca</th>
     <th>Placa</th>

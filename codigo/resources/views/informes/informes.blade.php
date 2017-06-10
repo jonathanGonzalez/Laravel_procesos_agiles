@@ -30,7 +30,7 @@ active
                 Puedes buscar registros <strong>entre dos fechas</strong>
             </div>                    
         @else
-            <table class="table" border="1">
+            <table class="table" border="0">
                 <tr>
                     <th>Placa</th>
                     <th>Cliente</th>

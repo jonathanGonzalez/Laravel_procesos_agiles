@@ -30,7 +30,7 @@
 {!! Form::close() !!}
 <p></p>
 <div class="row">
-  <table class="table" border="1">
+  <table class="table" border="0">
   <tr>
     <th>Placa</th>
     <th>Cliente</th>

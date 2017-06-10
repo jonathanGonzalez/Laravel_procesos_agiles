@@ -25,7 +25,7 @@
 </p>
 
 <div class="row">
-  <table class="table" border="1">
+  <table class="table" border="0">
   <tr>
     <th>Nombre</th>
     <th>Correo</th>    
