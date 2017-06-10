@@ -19,7 +19,7 @@ Route::get('index/index', 'IndexController@index');
 Route::get('personas/personas', 'PersonasController@personas');
 Route::get('vehiculos/vehiculos', 'VehiculosController@vehiculo');
 Route::get('informes/informes', 'InformesController@informes');
-Route::get('informes/reportes', 'InformesController@reportes');
+Route::get('informes/reportes', 'InformesController@consultarRegistrosEntreFechas');
 Route::get('usuarios/usuarios', 'UsuariosController@usuarios');
 
 Route::post('vehiculos', 'VehiculosController@vehiculo');
@@ -30,7 +30,6 @@ Route::resource('usuarios', 'UsuariosController');
 Route::resource('personas', 'PersonasController');
 Route::resource('vehiculos', 'VehiculosController');
 Route::resource('parqueos', 'IndexController');
-
 
 });
 

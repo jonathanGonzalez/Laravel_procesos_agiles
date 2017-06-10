@@ -1,8 +1,9 @@
-
 @extends('layouts.app')
+
 @section('vehiculosActive')
     active
 @stop
+
 @section('contenido')
 <h1>Agregar vehículo</h1>
 <p></p>
